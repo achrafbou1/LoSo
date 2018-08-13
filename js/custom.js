@@ -75,3 +75,35 @@ $('.nav-item, #scroll-to-top')
     }
   });
 });
+
+/* Active menu item on click */
+$(document).ready(function(){
+	'use strict';
+	$('.navbar-nav li a').click(function(){
+		'use strict';
+		$('.navbar-nav li a').parent().removeClass("active");
+
+		$(this).parent().addClass("active");
+
+	});
+});
+
+//Highlight menu item on scroll
+$(document).ready(function(){
+	'use strict';
+
+	$(window).scroll(function(){
+		'use strict';
+		$('section').each(function(){
+			var bb = $(this).attr("id"); //ABOUT? CONTACT? DOWNLOAD ?
+			var ht = $(this).outerHeight();
+			var grttop = $(this).offset().top - 70;
+
+			if($(window).scrollTop() > grttop && $(window).scrollTop() < grttop + ht){
+				$(".navbar-nav li a[href='#" + bb +"']").parent().addClass("active");
+			}else{
+				$(".navbar-nav li a[href='#" + bb +"']").parent().removeClass("active");
+			}
+		});
+	});
+});
