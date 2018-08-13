@@ -107,3 +107,44 @@ $(document).ready(function(){
 		});
 	});
 });
+
+$(document).ready(function(){
+	'use strict';
+
+	setInterval(function(){
+		'use strict';
+
+		var windowHeight = $(window).height();
+		var containerHeight = $('.header-container').height();
+		var padTop = windowHeight - containerHeight;
+		$('.header-container').css({
+			'padding-top': Math.round(padTop / 2) + 'px',
+			'padding-bottom': Math.round(padTop / 2) + 'px',
+		});
+	}, 10);
+});
+
+//Add bx slider to screens
+$(document).ready(function(){
+      $('.bxslider').bxSlider({
+      	slideWidth: 292.5,
+      	auto: true,
+      	minSlides: 1,
+      	maxSlides: 3,
+      	slidesMargin: 50
+      });
+    });
+
+//Add counter
+$(document).ready(function(){
+	$('.counter-num').counterUp({
+	    delay: 10,
+	    time: 2000
+	});
+});
+
+// Add animations, Initialize Wow.js
+$(document).ready(function(){
+	'use strict';
+	new WOW().init();
+});
