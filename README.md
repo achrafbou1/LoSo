@@ -1,6 +1,4 @@
-# Startup-Landing-Page
-Responsive startup landing page for a fictional mobile app.
+# LoSo
+Responsive startup landing page for mobile app company.
 
-Preview on Heroku: https://shielded-coast-53625.herokuapp.com/
-
-Don't forget to enable JavaScript :)
+Preview on Heroku: https://shielded-coast-53625.herokuapp.com
